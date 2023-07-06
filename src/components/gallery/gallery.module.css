@@ -1,0 +1,60 @@
+.gallery {
+	display: flex;
+	flex-direction: column;
+    align-items: baseline;
+	justify-content: flex-start;
+}
+
+.collapse_btn, .collapse_btn:hover, .collapse_btn:focus {
+	display: flex;
+    justify-content: space-between;
+    width: 100%;
+	margin-top: 1.5em;
+
+	border: 0;
+
+	background: transparent;
+
+	color:  #00FF85;
+	font-family: Impact, sans-serif;
+	font-size: 80px;
+	font-weight: 400;
+	letter-spacing: -0.02em;
+	line-height: 98px;
+}
+
+.collapse_year {
+	color: hsla(220, 4%, 27%, 1);
+	font-family: Impact, sans-serif;
+	font-size: 80px;
+	font-weight: 400;
+	letter-spacing: -0.02em;
+	line-height: 98px;
+}
+
+.collapse_btn svg {
+	margin-left: 28px;
+}
+
+.card {
+	border: 0;
+
+	background: transparent !important;
+
+	color: #fff;
+}
+
+.card_container {
+	display: flex;
+	gap: 10px;
+}
+
+@media (width < 64em) {
+	.card_container, .collapse_btn {
+		flex-direction: column;
+	}
+
+	.collapse_btn {
+		align-items: center;
+	}
+}

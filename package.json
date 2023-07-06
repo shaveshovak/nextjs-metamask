@@ -1,0 +1,68 @@
+{
+	"name": "coding-task-template",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint && npm run lint:css",
+		"lint:css": "stylelint --allow-empty-input 'src/**/*.css'",
+		"lint:ts": "eslint --no-error-on-unmatched-pattern . src/**/*.{js,jsx,ts,tsx}",
+		"prepare": "husky install",
+		"type-check": "tsc",
+		"format:css": "npm run lint:css -- --fix",
+		"format:ts": "npm run prettier -- --write"
+	},
+	"dependencies": {
+		"@coreui/coreui": "^4.2.6",
+		"@coreui/react": "^4.8.0",
+		"@metamask/detect-provider": "^2.0.0",
+		"@next/font": "13.1.5",
+		"@types/node": "18.11.18",
+		"@types/react": "18.0.27",
+		"@types/react-dom": "18.0.10",
+		"eslint": "8.32.0",
+		"eslint-config-next": "13.1.5",
+		"next": "13.1.5",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-hover-video-player": "^10.0.1",
+		"typescript": "5.0.4",
+		"web3": "^4.0.2"
+	},
+	"devDependencies": {
+		"@acolorbright/browserslist-config": "1.0.2",
+		"@acolorbright/eslint-config-ts-react": "4.1.2",
+		"@acolorbright/stylelint-config": "5.1.1",
+		"@commitlint/cli": "17.4.2",
+		"@commitlint/config-conventional": "17.4.2",
+		"@commitlint/prompt-cli": "17.4.2",
+		"eslint-config-prettier": "8.6.0",
+		"eslint-plugin-extra-rules": "0.8.1",
+		"eslint-plugin-import": "2.27.5",
+		"eslint-plugin-jsx-a11y": "6.7.1",
+		"eslint-plugin-react": "7.32.1",
+		"eslint-plugin-react-hooks": "4.6.0",
+		"eslint-plugin-simple-import-sort": "10.0.0",
+		"husky": "8.0.0",
+		"lint-staged": "13.1.0",
+		"prettier": "2.8.3",
+		"stylelint": "15.4.0"
+	},
+	"engines": {
+		"node": "18.13.0"
+	},
+	"lint-staged": {
+		"'src/**/*.{js,jsx,ts,tsx}'": [
+			"npm run lint:ts -- --fix",
+			"npm run format:ts"
+		],
+		"src/**/*.css": [
+			"npm run format:css"
+		]
+	},
+	"browserslist": [
+		"extends @acolorbright/browserslist-config"
+	]
+}

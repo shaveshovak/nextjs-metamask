@@ -1,0 +1,30 @@
+.favorite_title {
+	margin-bottom: 45px;
+
+	color: hsla(151, 100%, 50%, 1);
+	font-family: Impact, sans-serif;
+	font-size: 120px;
+	font-weight: 400;
+	letter-spacing: -0.02em;
+	line-height: 146px;
+}
+.favorite_sub_title {
+	margin-bottom: 26px;
+
+	color: #fff;
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 0.02em;
+	line-height: 16px;
+	text-transform: uppercase;
+}
+
+.favorite_list {
+	display: flex;
+	gap: 10px;
+}
+
+.favorite_list span {
+	color: #fff;
+}
